@@ -1,4 +1,4 @@
-from src_exercises.calcolatrice import somma, moltiplica
+from src_exercises.calcolatrice.py import somma, moltiplica
 
 def test_somma():
     assert somma(2, 3) == 5
