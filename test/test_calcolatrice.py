@@ -1,7 +1,4 @@
-import sys, os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-from src_exercises.calculator import somma, moltiplica
+from src_exercises.calcolatrice import somma, moltiplica
 
 def test_somma():
     assert somma(2, 3) == 5
