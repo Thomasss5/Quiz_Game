@@ -15,7 +15,7 @@ def media(numeri):
     return sum(numeri) / len(numeri)
 
 # Programma principale
-if __name__ == "__main__":
+if __name__ == "__main__": # pragma no cover
     # Test della funzione saluta
     print(saluta("Mario"))
     
