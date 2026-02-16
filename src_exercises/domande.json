@@ -1,0 +1,35 @@
+{
+    "title": "General Knowledge",
+    "questions": [
+        {
+            "text": "quale è la capitale della francia ? ",
+            "options": [
+                "Berlino",
+                "Madrid",
+                "Parigi",
+                "Roma"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Which planet is known as the Red Planet?",
+            "options": [
+                "Earth",
+                "Mars",
+                "Jupiter",
+                "Venus"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "What is 2 + 2?",
+            "options": [
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "correct_index": 1
+        }
+    ]
+}
