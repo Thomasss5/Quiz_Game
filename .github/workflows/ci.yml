@@ -52,5 +52,5 @@ jobs:
           mypy $(cat pyfiles.txt) || true
 
       - name: Test with pytest
-        run: cd src_exercises && pytest --cov . .
+        run: cd src_exercises && python -m pytest --cov . .
 
