@@ -1,8 +1,9 @@
-import unittest
 import os
 import shutil
-from quiz_model import Question, Quiz
+import unittest
+
 from quiz_manager import QuizManager
+from quiz_model import Question, Quiz
 
 
 class TestQuizLogic(unittest.TestCase):

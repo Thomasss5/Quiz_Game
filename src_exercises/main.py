@@ -1,7 +1,8 @@
 import os
 import sys
+
 from quiz_manager import QuizManager
-from quiz_model import Quiz, Question
+from quiz_model import Question, Quiz
 
 
 def clear_screen():

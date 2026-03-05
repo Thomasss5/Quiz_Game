@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox, simpledialog
+
 from quiz_manager import QuizManager
 from quiz_model import Quiz
 
