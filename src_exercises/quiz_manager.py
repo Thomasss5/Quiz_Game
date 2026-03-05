@@ -5,7 +5,7 @@ from quiz_model import Quiz
 
 
 class QuizManager:
-    def __init__(self, quizzes_dir: str = "quizzes"):
+    def __init__(self, quizzes_dir: str = "."):
         self.quizzes_dir = quizzes_dir
         if not os.path.exists(self.quizzes_dir):
             os.makedirs(self.quizzes_dir)
