@@ -1,6 +1,7 @@
 import json
 from typing import List, Dict, Optional
 
+
 class Question:
     def __init__(self, text: str, options: List[str], correct_index: int):
         self.text = text
@@ -8,18 +9,21 @@ class Question:
         self.correct_index = correct_index
 
     def is_correct(self, answer_index: int) -> bool:
-        return 0 <= answer_index < len(self.options) and answer_index == self.correct_index
+        return (
+            0 <= answer_index < len(self.options) and answer_index == self.correct_index
+        )
 
     def to_dict(self) -> Dict:
         return {
             "text": self.text,
             "options": self.options,
-            "correct_index": self.correct_index
+            "correct_index": self.correct_index,
         }
 
     @classmethod
-    def from_dict(cls, data: Dict) -> 'Question':
+    def from_dict(cls, data: Dict) -> "Question":
         return cls(data["text"], data["options"], data["correct_index"])
+
 
 class Quiz:
     def __init__(self, title: str, questions: List[Question] = None):
@@ -53,13 +57,10 @@ class Quiz:
         self.current_question_index = 0
 
     def to_dict(self) -> Dict:
-        return {
-            "title": self.title,
-            "questions": [q.to_dict() for q in self.questions]
-        }
+        return {"title": self.title, "questions": [q.to_dict() for q in self.questions]}
 
     @classmethod
-    def from_dict(cls, data: Dict) -> 'Quiz':
+    def from_dict(cls, data: Dict) -> "Quiz":
         quiz = cls(data["title"])
         for q_data in data.get("questions", []):
             quiz.add_question(Question.from_dict(q_data))
