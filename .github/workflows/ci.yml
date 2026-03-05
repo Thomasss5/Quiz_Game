@@ -29,14 +29,13 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           if [ -f requirements_dev.txt ]; then pip install -r requirements_dev.txt; fi
-          pip install pylint flake8 mypy pytest pytest-cov
+          pip install pylint flake8 mypy pytest pytest-cov black isort
           pip list
 
       - name: Lint with pylint
         run: |
           echo "Eseguo pylint solo sui file Python del progetto (ignoro venv/):"
           find . -type f -name "*.py" ! -path "./venv/*" > pyfiles.txt
-          cat pyfiles.txt
           pylint $(cat pyfiles.txt) --ignore=venv || true
 
       - name: Lint with flake8
@@ -51,6 +50,17 @@ jobs:
           find . -type f -name "*.py" ! -path "./venv/*" > pyfiles.txt
           mypy $(cat pyfiles.txt) || true
 
-      - name: Test with pytest
-        run: cd src_exercises && python -m pytest --cov . .
+      - name: Check formatting with black
+        run: |
+          echo "Controllo formattazione con black..."
+          black --check .
 
+      - name: Check import order with isort
+        run: |
+          echo "Controllo ordine degli import con isort..."
+          isort --check-only .
+
+      - name: Test with pytest
+        run: |
+          cd src_exercises
+          python -m pytest --cov . .
