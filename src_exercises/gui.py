@@ -82,7 +82,7 @@ class QuizApp:
                 relief="flat",
                 cursor="hand2",
             )
-            play_btn.pack(pady=20)
+            play_btn.pack(pady=25)
 
         quit_btn = tk.Button(
             frame,
