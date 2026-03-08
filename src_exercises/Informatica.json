@@ -1,0 +1,105 @@
+{
+    "title": "Informatica",
+    "questions": [
+        {
+            "text": "Cosa significa l'acronimo CPU?",
+            "options": [
+                "Central Process Utility",
+                "Central Processing Unit",
+                "Computer Personal Unit",
+                "Core Processing Unit"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale linguaggio di programmazione è noto come 'il linguaggio del web'?",
+            "options": [
+                "Python",
+                "Java",
+                "JavaScript",
+                "C++"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Quanti bit ci sono in un byte?",
+            "options": [
+                "4",
+                "8",
+                "16",
+                "32"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Cosa significa l'acronimo HTML?",
+            "options": [
+                "HyperText Markup Language",
+                "High Tech Modern Language",
+                "HyperText Machine Language",
+                "Home Tool Markup Language"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Quale sistema operativo è open source?",
+            "options": [
+                "Windows",
+                "macOS",
+                "Linux",
+                "iOS"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Cosa rappresenta l'acronimo RAM?",
+            "options": [
+                "Read Access Memory",
+                "Random Access Memory",
+                "Rapid Action Memory",
+                "Real Application Memory"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Qual è il sistema di numerazione utilizzato dai computer?",
+            "options": [
+                "Decimale",
+                "Ottale",
+                "Esadecimale",
+                "Binario"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "Chi è considerato il padre dell'informatica?",
+            "options": [
+                "Bill Gates",
+                "Steve Jobs",
+                "Alan Turing",
+                "Tim Berners-Lee"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Cosa significa SQL?",
+            "options": [
+                "Structured Query Language",
+                "Simple Question Language",
+                "System Query Logic",
+                "Standard Query Line"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Quale protocollo viene usato per navigare in modo sicuro sul web?",
+            "options": [
+                "HTTP",
+                "FTP",
+                "HTTPS",
+                "SMTP"
+            ],
+            "correct_index": 2
+        }
+    ]
+}

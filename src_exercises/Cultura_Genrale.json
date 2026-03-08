@@ -1,0 +1,105 @@
+{
+    "title": "Cultura Generale",
+    "questions": [
+        {
+            "text": "Qual è la capitale della Francia?",
+            "options": [
+                "Berlino",
+                "Madrid",
+                "Parigi",
+                "Roma"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "In quale anno è caduto il Muro di Berlino?",
+            "options": [
+                "1985",
+                "1989",
+                "1991",
+                "1993"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Qual è il pianeta più grande del sistema solare?",
+            "options": [
+                "Saturno",
+                "Marte",
+                "Giove",
+                "Nettuno"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Chi ha dipinto la Gioconda?",
+            "options": [
+                "Michelangelo",
+                "Raffaello",
+                "Caravaggio",
+                "Leonardo da Vinci"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "Qual è l'oceano più grande del mondo?",
+            "options": [
+                "Atlantico",
+                "Indiano",
+                "Pacifico",
+                "Artico"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Quante regioni ha l'Italia?",
+            "options": [
+                "15",
+                "18",
+                "20",
+                "22"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Qual è l'elemento chimico con simbolo 'O'?",
+            "options": [
+                "Oro",
+                "Osmio",
+                "Ossigeno",
+                "Oligio"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "In quale continente si trova l'Egitto?",
+            "options": [
+                "Asia",
+                "Europa",
+                "Africa",
+                "Oceania"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Chi ha scritto la Divina Commedia?",
+            "options": [
+                "Petrarca",
+                "Boccaccio",
+                "Dante Alighieri",
+                "Manzoni"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Qual è la montagna più alta del mondo?",
+            "options": [
+                "K2",
+                "Monte Bianco",
+                "Kangchenjunga",
+                "Monte Everest"
+            ],
+            "correct_index": 3
+        }
+    ]
+}
