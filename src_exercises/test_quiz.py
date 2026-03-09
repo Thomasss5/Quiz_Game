@@ -4,12 +4,12 @@ import shutil
 import sys
 import unittest
 from io import StringIO
-from unittest.mock import MagicMock, patch, mock_open, call
+from unittest.mock import MagicMock, call, mock_open, patch
 
 import pytest
 
-from quiz_model import Question, Quiz
 from quiz_manager import QuizManager
+from quiz_model import Question, Quiz
 
 # =====================================================================
 # TEST PER quiz_model.py - Classe Question
