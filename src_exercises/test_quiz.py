@@ -11,10 +11,10 @@ import pytest
 from quiz_model import Question, Quiz
 from quiz_manager import QuizManager
 
-
 # =====================================================================
 # TEST PER quiz_model.py - Classe Question
 # =====================================================================
+
 
 class TestQuestion:
     """Test per la classe Question."""
@@ -55,6 +55,7 @@ class TestQuestion:
 # =====================================================================
 # TEST PER quiz_model.py - Classe Quiz
 # =====================================================================
+
 
 class TestQuiz:
     """Test per la classe Quiz."""
@@ -134,9 +135,7 @@ class TestQuiz:
     def test_from_dict(self):
         data = {
             "title": "Loaded Quiz",
-            "questions": [
-                {"text": "Q1", "options": ["A", "B"], "correct_index": 0}
-            ],
+            "questions": [{"text": "Q1", "options": ["A", "B"], "correct_index": 0}],
         }
         quiz = Quiz.from_dict(data)
         assert quiz.title == "Loaded Quiz"
@@ -152,6 +151,7 @@ class TestQuiz:
 # =====================================================================
 # TEST PER quiz_manager.py
 # =====================================================================
+
 
 class TestQuizManager:
     """Test per la classe QuizManager."""
@@ -223,18 +223,21 @@ class TestQuizManager:
 # TEST PER main.py
 # =====================================================================
 
+
 class TestMainFunctions:
     """Test per le funzioni in main.py."""
 
     @patch("main.os.system")
     def test_clear_screen(self, mock_system):
         from main import clear_screen
+
         clear_screen()
         mock_system.assert_called_once()
 
     @patch("builtins.print")
     def test_print_header(self, mock_print):
         from main import print_header
+
         print_header()
         assert mock_print.call_count == 3
 
@@ -243,6 +246,7 @@ class TestMainFunctions:
     @patch("main.clear_screen")
     def test_play_quiz_correct_answers(self, mock_clear, mock_print, mock_input):
         from main import play_quiz
+
         q1 = Question("Q1?", ["A", "B"], 0)
         quiz = Quiz("Test", [q1])
         play_quiz(quiz)
@@ -254,6 +258,7 @@ class TestMainFunctions:
     @patch("main.clear_screen")
     def test_play_quiz_wrong_answer(self, mock_clear, mock_print, mock_input):
         from main import play_quiz
+
         q1 = Question("Q1?", ["A", "B"], 0)
         quiz = Quiz("Test", [q1])
         play_quiz(quiz)
@@ -262,8 +267,11 @@ class TestMainFunctions:
     @patch("builtins.input", side_effect=["abc", "", "1", "", ""])
     @patch("builtins.print")
     @patch("main.clear_screen")
-    def test_play_quiz_invalid_input_then_valid(self, mock_clear, mock_print, mock_input):
+    def test_play_quiz_invalid_input_then_valid(
+        self, mock_clear, mock_print, mock_input
+    ):
         from main import play_quiz
+
         q1 = Question("Q1?", ["A", "B"], 0)
         quiz = Quiz("Test", [q1])
         play_quiz(quiz)
@@ -271,8 +279,11 @@ class TestMainFunctions:
     @patch("builtins.input", side_effect=["99", "", "1", "", ""])
     @patch("builtins.print")
     @patch("main.clear_screen")
-    def test_play_quiz_out_of_range_then_valid(self, mock_clear, mock_print, mock_input):
+    def test_play_quiz_out_of_range_then_valid(
+        self, mock_clear, mock_print, mock_input
+    ):
         from main import play_quiz
+
         q1 = Question("Q1?", ["A", "B"], 0)
         quiz = Quiz("Test", [q1])
         play_quiz(quiz)
@@ -282,6 +293,7 @@ class TestMainFunctions:
     @patch("main.clear_screen")
     def test_play_quiz_perfect_score(self, mock_clear, mock_print, mock_input):
         from main import play_quiz
+
         q1 = Question("Q1?", ["A", "B"], 0)
         q2 = Question("Q2?", ["X", "Y"], 0)
         quiz = Quiz("Test", [q1, q2])
@@ -296,6 +308,7 @@ class TestMainFunctions:
     @patch("main.clear_screen")
     def test_play_quiz_great_score(self, mock_clear, mock_print, mock_input):
         from main import play_quiz
+
         q1 = Question("Q1?", ["A", "B"], 0)
         q2 = Question("Q2?", ["X", "Y"], 0)
         quiz = Quiz("Test", [q1, q2])
@@ -307,27 +320,32 @@ class TestMainFunctions:
     @patch("main.clear_screen")
     def test_play_quiz_low_score(self, mock_clear, mock_print, mock_input):
         from main import play_quiz
+
         q1 = Question("Q1?", ["A", "B"], 0)
         q2 = Question("Q2?", ["X", "Y"], 0)
         quiz = Quiz("Test", [q1, q2])
         play_quiz(quiz)
         assert quiz.score == 0
 
-    @patch("builtins.input", side_effect=[
-        "My Quiz",          # quiz title
-        "Question 1?",      # question text
-        "Option A",         # option 1
-        "Option B",         # option 2
-        "done",             # finish options
-        "1",                # correct answer index
-        "done",             # finish adding questions
-        "test_created",     # filename
-        "",                 # Press Enter
-    ])
+    @patch(
+        "builtins.input",
+        side_effect=[
+            "My Quiz",  # quiz title
+            "Question 1?",  # question text
+            "Option A",  # option 1
+            "Option B",  # option 2
+            "done",  # finish options
+            "1",  # correct answer index
+            "done",  # finish adding questions
+            "test_created",  # filename
+            "",  # Press Enter
+        ],
+    )
     @patch("builtins.print")
     @patch("main.clear_screen")
     def test_create_quiz_success(self, mock_clear, mock_print, mock_input):
         from main import create_quiz
+
         test_dir = "test_create_dir"
         manager = QuizManager(test_dir)
         try:
@@ -338,15 +356,19 @@ class TestMainFunctions:
             if os.path.exists(test_dir):
                 shutil.rmtree(test_dir)
 
-    @patch("builtins.input", side_effect=[
-        "Empty Quiz",       # quiz title
-        "done",             # immediately done (no questions)
-        "",                 # Press Enter
-    ])
+    @patch(
+        "builtins.input",
+        side_effect=[
+            "Empty Quiz",  # quiz title
+            "done",  # immediately done (no questions)
+            "",  # Press Enter
+        ],
+    )
     @patch("builtins.print")
     @patch("main.clear_screen")
     def test_create_quiz_no_questions(self, mock_clear, mock_print, mock_input):
         from main import create_quiz
+
         test_dir = "test_create_empty"
         manager = QuizManager(test_dir)
         try:
@@ -357,22 +379,26 @@ class TestMainFunctions:
             if os.path.exists(test_dir):
                 shutil.rmtree(test_dir)
 
-    @patch("builtins.input", side_effect=[
-        "Quiz",             # quiz title
-        "Q?",               # question text
-        "A",                # only 1 option
-        "done",             # try to finish (too few options)
-        "B",                # option 2
-        "done",             # finish options
-        "1",                # correct answer
-        "done",             # finish questions
-        "test_min",         # filename
-        "",                 # Press Enter
-    ])
+    @patch(
+        "builtins.input",
+        side_effect=[
+            "Quiz",  # quiz title
+            "Q?",  # question text
+            "A",  # only 1 option
+            "done",  # try to finish (too few options)
+            "B",  # option 2
+            "done",  # finish options
+            "1",  # correct answer
+            "done",  # finish questions
+            "test_min",  # filename
+            "",  # Press Enter
+        ],
+    )
     @patch("builtins.print")
     @patch("main.clear_screen")
     def test_create_quiz_min_options(self, mock_clear, mock_print, mock_input):
         from main import create_quiz
+
         test_dir = "test_create_min"
         manager = QuizManager(test_dir)
         try:
@@ -383,23 +409,29 @@ class TestMainFunctions:
             if os.path.exists(test_dir):
                 shutil.rmtree(test_dir)
 
-    @patch("builtins.input", side_effect=[
-        "Quiz",             # quiz title
-        "Q?",               # question text
-        "A",                # option 1
-        "B",                # option 2
-        "done",             # finish options
-        "abc",              # invalid correct index
-        "99",               # out of range correct index
-        "1",                # valid correct index
-        "done",             # finish questions
-        "test_invalid",     # filename
-        "",                 # Press Enter
-    ])
+    @patch(
+        "builtins.input",
+        side_effect=[
+            "Quiz",  # quiz title
+            "Q?",  # question text
+            "A",  # option 1
+            "B",  # option 2
+            "done",  # finish options
+            "abc",  # invalid correct index
+            "99",  # out of range correct index
+            "1",  # valid correct index
+            "done",  # finish questions
+            "test_invalid",  # filename
+            "",  # Press Enter
+        ],
+    )
     @patch("builtins.print")
     @patch("main.clear_screen")
-    def test_create_quiz_invalid_correct_index(self, mock_clear, mock_print, mock_input):
+    def test_create_quiz_invalid_correct_index(
+        self, mock_clear, mock_print, mock_input
+    ):
         from main import create_quiz
+
         test_dir = "test_create_invalid"
         manager = QuizManager(test_dir)
         try:
@@ -413,44 +445,59 @@ class TestMainFunctions:
     @patch("main.clear_screen")
     def test_main_exit(self, mock_clear, mock_print, mock_input):
         from main import main
+
         main()
 
     @patch("builtins.input", side_effect=["1", "", "3"])
     @patch("builtins.print")
     @patch("main.clear_screen")
     @patch("main.QuizManager")
-    def test_main_play_no_quizzes(self, mock_manager_cls, mock_clear, mock_print, mock_input):
+    def test_main_play_no_quizzes(
+        self, mock_manager_cls, mock_clear, mock_print, mock_input
+    ):
         from main import main
+
         mock_mgr = MagicMock()
         mock_manager_cls.return_value = mock_mgr
         mock_mgr.list_quizzes.return_value = []
         main()
 
-    @patch("builtins.input", side_effect=[
-        "1",                # Select Play Quiz
-        "1",                # Select first quiz
-        "1", "",            # Answer question + Enter
-        "1", "",            # Answer question + Enter
-        "1", "",            # Answer question + Enter
-        "",                 # Press Enter to return
-        "3",                # Exit
-    ])
+    @patch(
+        "builtins.input",
+        side_effect=[
+            "1",  # Select Play Quiz
+            "1",  # Select first quiz
+            "1",
+            "",  # Answer question + Enter
+            "1",
+            "",  # Answer question + Enter
+            "1",
+            "",  # Answer question + Enter
+            "",  # Press Enter to return
+            "3",  # Exit
+        ],
+    )
     @patch("builtins.print")
     @patch("main.clear_screen")
     def test_main_play_quiz_full(self, mock_clear, mock_print, mock_input):
         from main import main
+
         main()
 
-    @patch("builtins.input", side_effect=[
-        "1",                # Select Play Quiz
-        "abc",              # Invalid quiz selection
-        "",                 # Press Enter
-        "3",                # Exit
-    ])
+    @patch(
+        "builtins.input",
+        side_effect=[
+            "1",  # Select Play Quiz
+            "abc",  # Invalid quiz selection
+            "",  # Press Enter
+            "3",  # Exit
+        ],
+    )
     @patch("builtins.print")
     @patch("main.clear_screen")
     def test_main_play_invalid_selection(self, mock_clear, mock_print, mock_input):
         from main import main
+
         # Save a quiz so the quiz list is not empty
         test_dir = "."
         manager = QuizManager(test_dir)
@@ -464,16 +511,20 @@ class TestMainFunctions:
             if os.path.exists(path):
                 os.remove(path)
 
-    @patch("builtins.input", side_effect=[
-        "1",                # Select Play Quiz
-        "99",               # Out of range quiz selection
-        "",                 # Press Enter
-        "3",                # Exit
-    ])
+    @patch(
+        "builtins.input",
+        side_effect=[
+            "1",  # Select Play Quiz
+            "99",  # Out of range quiz selection
+            "",  # Press Enter
+            "3",  # Exit
+        ],
+    )
     @patch("builtins.print")
     @patch("main.clear_screen")
     def test_main_play_out_of_range_selection(self, mock_clear, mock_print, mock_input):
         from main import main
+
         test_dir = "."
         manager = QuizManager(test_dir)
         quiz = Quiz("Temp")
@@ -491,6 +542,7 @@ class TestMainFunctions:
 # TEST PER gui.py
 # =====================================================================
 
+
 class TestGuiApp:
     """Test per la classe QuizApp in gui.py con mock di tkinter."""
 
@@ -505,6 +557,7 @@ class TestGuiApp:
         mock_manager_instance.list_quizzes.return_value = []
 
         from gui import QuizApp
+
         app = QuizApp(mock_root)
         assert app.root == mock_root
         assert app.current_quiz is None
@@ -522,6 +575,7 @@ class TestGuiApp:
         mock_manager.return_value.list_quizzes.return_value = []
 
         from gui import QuizApp
+
         app = QuizApp(mock_root)
         mock_root.winfo_children.return_value = [mock_widget1, mock_widget2]
         app.clear_window()
@@ -533,7 +587,9 @@ class TestGuiApp:
     @patch("gui.messagebox")
     @patch("gui.QuizManager")
     @patch("gui.tk.Tk")
-    def test_start_quiz_success(self, mock_tk, mock_manager, mock_msgbox, mock_optmenu, mock_strvar):
+    def test_start_quiz_success(
+        self, mock_tk, mock_manager, mock_msgbox, mock_optmenu, mock_strvar
+    ):
         """Test che start_quiz carica e avvia il quiz."""
         mock_root = MagicMock()
         mock_root.winfo_children.return_value = []
@@ -546,6 +602,7 @@ class TestGuiApp:
         mock_manager_instance.load_quiz.return_value = quiz
 
         from gui import QuizApp
+
         app = QuizApp(mock_root)
         app.quiz_var = MagicMock()
         app.quiz_var.get.return_value = "quiz1.json"
@@ -558,7 +615,9 @@ class TestGuiApp:
     @patch("gui.messagebox")
     @patch("gui.QuizManager")
     @patch("gui.tk.Tk")
-    def test_start_quiz_fail(self, mock_tk, mock_manager, mock_msgbox, mock_optmenu, mock_strvar):
+    def test_start_quiz_fail(
+        self, mock_tk, mock_manager, mock_msgbox, mock_optmenu, mock_strvar
+    ):
         """Test che start_quiz mostra errore se il quiz non si carica."""
         mock_root = MagicMock()
         mock_root.winfo_children.return_value = []
@@ -568,12 +627,12 @@ class TestGuiApp:
         mock_manager_instance.load_quiz.return_value = None
 
         from gui import QuizApp
+
         app = QuizApp(mock_root)
         app.quiz_var = MagicMock()
         app.quiz_var.get.return_value = "bad.json"
         app.start_quiz()
         mock_msgbox.showerror.assert_called_once()
-
 
     @patch("gui.messagebox")
     @patch("gui.QuizManager")
@@ -585,6 +644,7 @@ class TestGuiApp:
         mock_manager.return_value.list_quizzes.return_value = []
 
         from gui import QuizApp
+
         app = QuizApp(mock_root)
         quiz = Quiz("Test")
         quiz.add_question(Question("Q?", ["A", "B"], 0))
@@ -602,6 +662,7 @@ class TestGuiApp:
         mock_manager.return_value.list_quizzes.return_value = []
 
         from gui import QuizApp
+
         app = QuizApp(mock_root)
         quiz = Quiz("Test")
         quiz.add_question(Question("Q?", ["A", "B"], 0))
@@ -618,6 +679,7 @@ class TestGuiApp:
         mock_manager.return_value.list_quizzes.return_value = []
 
         from gui import QuizApp
+
         app = QuizApp(mock_root)
         quiz = Quiz("Test")
         quiz.add_question(Question("Q?", ["A", "B"], 0))
@@ -634,6 +696,7 @@ class TestGuiApp:
         mock_manager.return_value.list_quizzes.return_value = []
 
         from gui import QuizApp
+
         app = QuizApp(mock_root)
         quiz = Quiz("Test")
         quiz.add_question(Question("Q?", ["A", "B"], 0))
@@ -650,6 +713,7 @@ class TestGuiApp:
         mock_manager.return_value.list_quizzes.return_value = []
 
         from gui import QuizApp
+
         app = QuizApp(mock_root)
         quiz = Quiz("Test")
         quiz.add_question(Question("Q1?", ["A", "B"], 0))
@@ -670,6 +734,7 @@ class TestGuiApp:
         mock_manager.return_value.list_quizzes.return_value = []
 
         from gui import QuizApp
+
         app = QuizApp(mock_root)
         quiz = Quiz("Test")
         quiz.add_question(Question("Q?", ["A", "B", "C"], 0))
@@ -685,6 +750,7 @@ class TestGuiApp:
         mock_manager.return_value.list_quizzes.return_value = []
 
         from gui import QuizApp
+
         app = QuizApp(mock_root)
         quiz = Quiz("Test")
         quiz.add_question(Question("Q?", ["A", "B"], 0))
@@ -696,7 +762,9 @@ class TestGuiApp:
     @patch("gui.tk.OptionMenu")
     @patch("gui.QuizManager")
     @patch("gui.tk.Tk")
-    def test_setup_main_menu_with_quizzes(self, mock_tk, mock_manager, mock_optmenu, mock_strvar):
+    def test_setup_main_menu_with_quizzes(
+        self, mock_tk, mock_manager, mock_optmenu, mock_strvar
+    ):
         """Test menu principale quando ci sono quiz disponibili."""
         mock_root = MagicMock()
         mock_root.winfo_children.return_value = []
@@ -705,6 +773,7 @@ class TestGuiApp:
         mock_manager_instance.list_quizzes.return_value = ["quiz1.json", "quiz2.json"]
 
         from gui import QuizApp
+
         app = QuizApp(mock_root)
 
 
