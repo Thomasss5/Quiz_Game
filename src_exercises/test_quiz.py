@@ -471,17 +471,25 @@ class TestMainFunctions:
             "",  # Answer question + Enter
             "1",
             "",  # Answer question + Enter
-            "1",
-            "",  # Answer question + Enter
             "",  # Press Enter to return
             "3",  # Exit
         ],
     )
     @patch("builtins.print")
     @patch("main.clear_screen")
-    def test_main_play_quiz_full(self, mock_clear, mock_print, mock_input):
+    @patch("main.QuizManager")
+    def test_main_play_quiz_full(
+        self, mock_manager_cls, mock_clear, mock_print, mock_input
+    ):
         from main import main
 
+        mock_mgr = MagicMock()
+        mock_manager_cls.return_value = mock_mgr
+        quiz = Quiz("Test Quiz")
+        quiz.add_question(Question("Q1?", ["A", "B"], 0))
+        quiz.add_question(Question("Q2?", ["X", "Y"], 0))
+        mock_mgr.list_quizzes.return_value = ["test.json"]
+        mock_mgr.load_quiz.return_value = quiz
         main()
 
     @patch(
