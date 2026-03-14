@@ -1,0 +1,9 @@
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 88
+
+[tool.pytest.ini_options]
+testpaths = ["src_exercises"]
+pythonpath = ["src_exercises"]
