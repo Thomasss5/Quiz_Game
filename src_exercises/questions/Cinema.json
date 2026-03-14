@@ -1,0 +1,105 @@
+{
+    "title": "Cinema",
+    "questions": [
+        {
+            "text": "Quale film ha vinto il primo Oscar come Miglior Film nel 1929?",
+            "options": ["Il cantante di jazz", "Ali (Wings)", "Metropolis", "Aurora"],
+            "correct_index": 1
+        },
+        {
+            "text": "Chi ha diretto il film 'Pulp Fiction'?",
+            "options": ["Steven Spielberg", "Martin Scorsese", "Quentin Tarantino", "Christopher Nolan"],
+            "correct_index": 2
+        },
+        {
+            "text": "In 'Matrix', di che colore è la pillola che Neo sceglie per scoprire la verità?",
+            "options": ["Blu", "Verde", "Gialla", "Rossa"],
+            "correct_index": 3
+        },
+        {
+            "text": "Qual è l'unico film d'animazione Disney ad aver ricevuto una nomination all'Oscar come Miglior Film (prima dell'espansione a 10 candidati)?",
+            "options": ["Il Re Leone", "La Bella e la Bestia", "Aladdin", "Fantasia"],
+            "correct_index": 1
+        },
+        {
+            "text": "Quanti Oscar ha vinto in totale il film 'Titanic'?",
+            "options": ["8", "10", "11", "12"],
+            "correct_index": 2
+        },
+        {
+            "text": "Chi interpreta Jack Sparrow nella saga 'Pirati dei Caraibi'?",
+            "options": ["Orlando Bloom", "Brad Pitt", "Johnny Depp", "Geoffrey Rush"],
+            "correct_index": 2
+        },
+        {
+            "text": "In quale anno è uscito il primo film di 'Guerre Stellari' (Star Wars)?",
+            "options": ["1975", "1977", "1980", "1983"],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale attore ha interpretato il Joker nel film 'Il Cavaliere Oscuro'?",
+            "options": ["Jack Nicholson", "Heath Ledger", "Joaquin Phoenix", "Jared Leto"],
+            "correct_index": 1
+        },
+        {
+            "text": "Qual è il nome del protagonista di 'Forrest Gump'?",
+            "options": ["Tom Hanks", "Forrest Gump", "Bubba Blue", "Jenny Curran"],
+            "correct_index": 1
+        },
+        {
+            "text": "Chi ha diretto 'La dolce vita'?",
+            "options": ["Luchino Visconti", "Vittorio De Sica", "Federico Fellini", "Pier Paolo Pasolini"],
+            "correct_index": 2
+        },
+        {
+            "text": "Come si chiama l'intelligenza artificiale del film '2001: Odissea nello spazio'?",
+            "options": ["JARVIS", "SKYNET", "HAL 9000", "VIKI"],
+            "correct_index": 2
+        },
+        {
+            "text": "Quale film detiene il record per il maggior incasso di sempre (non regolato dall'inflazione)?",
+            "options": ["Avengers: Endgame", "Titanic", "Avatar", "Star Wars: Il risveglio della Forza"],
+            "correct_index": 2
+        },
+        {
+            "text": "Per quale film Leonardo DiCaprio ha vinto il suo primo Oscar come Migliore Attore?",
+            "options": ["The Wolf of Wall Street", "The Revenant", "Inception", "Titanic"],
+            "correct_index": 1
+        },
+        {
+            "text": "In 'Shining', come si chiama l'hotel dove si svolge la storia?",
+            "options": ["Bates Motel", "Overlook Hotel", "Grand Budapest Hotel", "Hotel Continental"],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale regista è famoso per i suoi 'cameo' in quasi tutti i suoi film?",
+            "options": ["Alfred Hitchcock", "Stanley Kubrick", "Francis Ford Coppola", "Ridley Scott"],
+            "correct_index": 0
+        },
+        {
+            "text": "Qual è il nome della città protetta da Batman?",
+            "options": ["Metropolis", "Central City", "Gotham City", "Star City"],
+            "correct_index": 2
+        },
+        {
+            "text": "Quale film d'animazione del 1995 è stato il primo ad essere interamente realizzato in computer grafica?",
+            "options": ["A Bug's Life", "Shrek", "Toy Story", "Antz"],
+            "correct_index": 2
+        },
+        {
+            "text": "Chi è il protagonista del film 'Il Gladiatore'?",
+            "options": ["Joaquin Phoenix", "Russell Crowe", "Mel Gibson", "Gerard Butler"],
+            "correct_index": 1
+        },
+        {
+            "text": "Nel film 'Il Signore degli Anelli', chi è il creatore dell'Unico Anello?",
+            "options": ["Saruman", "Sauron", "Gandalf", "Gollum"],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale attrice interpreta Hermione Granger nella saga di Harry Potter?",
+            "options": ["Bonnie Wright", "Evanna Lynch", "Emma Watson", "Dakota Fanning"],
+            "correct_index": 2
+        }
+    ]
+}

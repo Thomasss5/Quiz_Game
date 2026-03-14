@@ -1,0 +1,205 @@
+{
+    "title": "Scienza",
+    "questions": [
+        {
+            "text": "Qual è il simbolo chimico dell'Oro?",
+            "options": [
+                "Ag",
+                "Fe",
+                "Au",
+                "Pb"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Qual è la formula chimica dell'acqua?",
+            "options": [
+                "CO2",
+                "H2O",
+                "O2",
+                "NaCl"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Chi ha formulato la Teoria della Relatività?",
+            "options": [
+                "Isaac Newton",
+                "Albert Einstein",
+                "Nikola Tesla",
+                "Marie Curie"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale organo del corpo umano produce l'insulina?",
+            "options": [
+                "Fegato",
+                "Cervello",
+                "Pancreas",
+                "Reni"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Qual è la velocità della luce (circa)?",
+            "options": [
+                "100.000 km/s",
+                "300.000 km/s",
+                "1.000.000 km/s",
+                "50.000 km/s"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Chi ha scoperto la penicillina?",
+            "options": [
+                "Alexander Fleming",
+                "Louis Pasteur",
+                "Gregor Mendel",
+                "Charles Darwin"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Qual è il pianeta più denso del sistema solare?",
+            "options": [
+                "Giove",
+                "Terra",
+                "Marte",
+                "Saturno"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Come si chiama il processo con cui le piante producono nutrimento?",
+            "options": [
+                "Respirazione",
+                "Fotosintesi",
+                "Osmosi",
+                "Mitosi"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Qual è la parte più esterna del Sole?",
+            "options": [
+                "Nucleo",
+                "Fotosfera",
+                "Corona",
+                "Cromosfera"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Quale metallo è liquido a temperatura ambiente?",
+            "options": [
+                "Piombo",
+                "Mercurio",
+                "Stagno",
+                "Rame"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quanti denti ha un adulto medio?",
+            "options": [
+                "28",
+                "30",
+                "32",
+                "34"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Qual è il gas più abbondante nell'atmosfera terrestre?",
+            "options": [
+                "Ossigeno",
+                "Idrogeno",
+                "Azoto",
+                "Anidride Carbonica"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Chi ha proposto la teoria dell'evoluzione?",
+            "options": [
+                "Lamarck",
+                "Charles Darwin",
+                "Mendel",
+                "Wallace"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Qual è il pH dell'acqua pura?",
+            "options": [
+                "0",
+                "5",
+                "7",
+                "14"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Quale scienziata ha vinto due premi Nobel in campi diversi?",
+            "options": [
+                "Rosalind Franklin",
+                "Marie Curie",
+                "Rita Levi Montalcini",
+                "Ada Lovelace"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quante ossa ha il corpo umano adulto?",
+            "options": [
+                "150",
+                "206",
+                "250",
+                "300"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Qual è l'osso più lungo del corpo umano?",
+            "options": [
+                "Omero",
+                "Radio",
+                "Tibia",
+                "Femore"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "Qual è l'elemento chimico più leggero?",
+            "options": [
+                "Elio",
+                "Ossigeno",
+                "Idrogeno",
+                "Carbonio"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Chi ha inventato la lampadina (forma commerciale)?",
+            "options": [
+                "Edison",
+                "Tesla",
+                "Bell",
+                "Morse"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "In quale parte del corpo si trovano i globuli rossi?",
+            "options": [
+                "Nel sistema nervoso",
+                "Nel sangue",
+                "Nei muscoli",
+                "Nello stomaco"
+            ],
+            "correct_index": 1
+        }
+    ]
+}

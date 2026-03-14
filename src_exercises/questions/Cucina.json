@@ -1,0 +1,205 @@
+{
+    "title": "Cucina",
+    "questions": [
+        {
+            "text": "Qual è l'ingrediente principale del pesto?",
+            "options": [
+                "Prezzemolo",
+                "Basilico",
+                "Spinaci",
+                "Salvia"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale tipo di riso è più indicato per il risotto?",
+            "options": [
+                "Basmati",
+                "Venere",
+                "Integrale",
+                "Arborio"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "Da dove proviene originariamente il Sushi?",
+            "options": [
+                "Giappone",
+                "Cina",
+                "Corea",
+                "Thailandia"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Qual è il formaggio tipico della pizza Margherita?",
+            "options": [
+                "Fontina",
+                "Gorgonzola",
+                "Mozzarella",
+                "Pecorino"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Che ingrediente rende 'carbonara' la pasta?",
+            "options": [
+                "Panna",
+                "Pomodoro",
+                "Besciamella",
+                "Uovo"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "Liquore usato per bagnare i savoiardi nel Tiramisù?",
+            "options": [
+                "Caffè",
+                "Limoncello",
+                "Grappa",
+                "Sambuca"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Componente principale della Meringa?",
+            "options": [
+                "Tuorlo d'uovo",
+                "Albume d'uovo",
+                "Panna montata",
+                "Farina"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale spezia rende giallo il risotto alla milanese?",
+            "options": [
+                "Curcuma",
+                "Curry",
+                "Zafferano",
+                "Paprika"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Cos'è il 'Tofu'?",
+            "options": [
+                "Formaggio di soia",
+                "Formaggio vaccino",
+                "Un pesce",
+                "Una radice"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Quale paese è famoso per i 'Macarons'?",
+            "options": [
+                "Italia",
+                "Belgio",
+                "Germania",
+                "Francia"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "Salsa a base di avocado tipica messicana?",
+            "options": [
+                "Hummus",
+                "Guacamole",
+                "Tzatziki",
+                "Barbecue"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Qual è l'ingrediente che fa lievitare il pane?",
+            "options": [
+                "Zucchero",
+                "Sale",
+                "Olio",
+                "Lievito"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "In quale città è nata la Pizza?",
+            "options": [
+                "Napoli",
+                "Roma",
+                "Firenze",
+                "Palermo"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Qual è il fungo più pregiato in cucina?",
+            "options": [
+                "Champignon",
+                "Tartufo bianco",
+                "Porcino",
+                "Chiodino"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Carne usata per il Ragù alla Bolognese?",
+            "options": [
+                "Solo Maiale",
+                "Manzo e Maiale",
+                "Pollo",
+                "Agnello"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Bevanda ottenuta dalla fermentazione dell'uva?",
+            "options": [
+                "Birra",
+                "Sidro",
+                "Vino",
+                "Vodka"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Cosa si ottiene montando panna e zucchero a velo?",
+            "options": [
+                "Crema Chantilly",
+                "Crema Pasticcera",
+                "Zabaione",
+                "Mousse"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Qual è il cereale alla base della polenta?",
+            "options": [
+                "Mais",
+                "Grano",
+                "Orzo",
+                "Riso"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Tecnica di cottura 'al dente'?",
+            "options": [
+                "Cottura prolungata",
+                "Mantieni consistenza",
+                "Al forno",
+                "A vapore"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Pasta sarda a forma di piccoli anelli?",
+            "options": [
+                "Orecchiette",
+                "Trofie",
+                "Cous Cous",
+                "Fregola"
+            ],
+            "correct_index": 3
+        }
+    ]
+}
