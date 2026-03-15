@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Universe Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           PALETTE COLORI - identica a gui.py
+           bg_color:        #2D3436
+           text_color:      #dfe6e9
+           accent_color:    #00b894
+           mix_color:       #0984e3
+           correct_color:   #55efc4
+           incorrect_color: #ff7675
+           timer_color:     #fab1a0
+           header_bg:       #34495e
+           ============================================ */
+
+        :root {
+            --bg-color: #2D3436;
+            --text-color: #dfe6e9;
+            --accent-color: #00b894;
+            --mix-color: #0984e3;
+            --correct-color: #55efc4;
+            --incorrect-color: #ff7675;
+            --timer-color: #fab1a0;
+            --header-bg: #34495e;
+            --subtle-text: #b2bec3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* ===== TITOLI ===== */
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 11px;
+            color: var(--subtle-text);
+            margin-bottom: 40px;
+        }
+
+        .category-label {
+            font-size: 12px;
+            font-style: italic;
+            color: var(--accent-color);
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 700px;
+            line-height: 1.5;
+            padding: 40px 0;
+        }
+
+        /* ===== BOTTONI ===== */
+        .btn {
+            font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 15px 20px;
+            width: 350px;
+            max-width: 100%;
+            text-align: center;
+            transition: opacity 0.2s, transform 0.1s;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+            transform: translateY(-1px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-mix {
+            background-color: var(--mix-color);
+        }
+
+        .btn-accent {
+            background-color: var(--accent-color);
+        }
+
+        .btn-danger {
+            background-color: var(--incorrect-color);
+        }
+
+        .btn-orange {
+            background-color: #e67e22;
+            font-size: 9px;
+            padding: 8px 15px;
+            width: auto;
+        }
+
+        .btn-next {
+            background-color: var(--mix-color);
+        }
+
+        .btn + .btn {
+            margin-top: 10px;
+        }
+
+        /* ===== SELECT/DROPDOWN ===== */
+        .select-wrapper {
+            margin: 10px 0;
+        }
+
+        .select-wrapper select {
+            font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            width: 350px;
+            max-width: 100%;
+            padding: 12px 15px;
+            background-color: var(--header-bg);
+            color: var(--text-color);
+            border: 1px solid #4a6274;
+            border-radius: 4px;
+            cursor: pointer;
+            appearance: auto;
+        }
+
+        /* ===== SLIDER/RANGE ===== */
+        .slider-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .slider-wrapper input[type="range"] {
+            width: 300px;
+            accent-color: var(--accent-color);
+        }
+
+        .slider-value {
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+        }
+
+        /* ===== HEADER BAR (durante quiz) ===== */
+        .quiz-header {
+            width: 100%;
+            max-width: 850px;
+            background-color: var(--header-bg);
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+
+        .quiz-header .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .quiz-header .header-right {
+            margin-left: auto;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .quiz-header .counter {
+            font-size: 13px;
+            color: white;
+        }
+
+        /* ===== TIMER ===== */
+        .timer-section {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .timer-text {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--timer-color);
+            margin-bottom: 8px;
+        }
+
+        .timer-bar-wrapper {
+            width: 300px;
+            height: 8px;
+            background-color: var(--header-bg);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .timer-bar {
+            height: 100%;
+            background-color: var(--accent-color);
+            transition: width 1s linear;
+            border-radius: 4px;
+        }
+
+        .timer-bar.warning {
+            background-color: #e67e22;
+        }
+
+        .timer-bar.danger {
+            background-color: var(--incorrect-color);
+        }
+
+        /* ===== OPZIONI RADIO ===== */
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .option-item {
+            display: none;
+        }
+
+        .option-label {
+            display: block;
+            font-size: 13px;
+            padding: 12px 20px;
+            background-color: var(--header-bg);
+            color: var(--text-color);
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.2s, transform 0.1s;
+            border: 2px solid transparent;
+        }
+
+        .option-label:hover {
+            background-color: #3d566e;
+            transform: translateY(-1px);
+        }
+
+        .option-item:checked + .option-label {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .option-label.disabled {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .option-label.correct-highlight {
+            background-color: var(--correct-color) !important;
+            color: #2D3436 !important;
+            border-color: var(--correct-color) !important;
+            opacity: 1 !important;
+        }
+
+        .option-label.incorrect-highlight {
+            background-color: var(--incorrect-color) !important;
+            color: white !important;
+            border-color: var(--incorrect-color) !important;
+            opacity: 1 !important;
+        }
+
+        /* ===== FEEDBACK (risposta esatta/errata/timeout) ===== */
+        .feedback {
+            font-size: 15px;
+            font-weight: 700;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .feedback.correct {
+            color: var(--correct-color);
+        }
+
+        .feedback.incorrect {
+            color: var(--incorrect-color);
+        }
+
+        .feedback.timeout {
+            color: var(--timer-color);
+        }
+
+        .feedback-detail {
+            font-size: 13px;
+            font-weight: 400;
+            margin-top: 5px;
+        }
+
+        /* ===== QUIZ BODY (con padding per header fisso) ===== */
+        .quiz-body {
+            padding-top: 60px;
+            width: 100%;
+            max-width: 850px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-bottom: 40px;
+        }
+
+        /* ===== RESULTS ===== */
+        .score-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 10px 0;
+        }
+
+        /* ===== MODALITA LABEL ===== */
+        .mode-label {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 10px 0;
+        }
+
+        .config-hint {
+            font-size: 10px;
+            color: var(--subtle-text);
+            margin: 20px 0;
+        }
+
+        /* ===== SPACING HELPERS ===== */
+        .mt-10 { margin-top: 10px; }
+        .mt-20 { margin-top: 20px; }
+        .mt-40 { margin-top: 40px; }
+        .mt-50 { margin-top: 50px; }
+        .mb-5 { margin-bottom: 5px; }
+        .mb-10 { margin-bottom: 10px; }
+        .py-5 { padding-top: 5px; padding-bottom: 5px; }
+    </style>
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

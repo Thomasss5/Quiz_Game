@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Header fisso -->
+<div class="quiz-header">
+    <div class="header-left">
+        <form action="/" method="GET" style="margin:0">
+            <button type="submit" class="btn btn-orange">MENU</button>
+        </form>
+        <span class="counter">Domanda {{ current }}/{{ total }}</span>
+    </div>
+    <div class="header-right">
+        Punti: {{ score }}
+    </div>
+</div>
+
+<!-- Corpo quiz -->
+<div class="quiz-body">
+    <p class="category-label mt-20">CATEGORIA: {{ category }}</p>
+
+    <!-- Timer -->
+    <div class="timer-section">
+        <p class="timer-text" id="timer-text">Tempo: {{ time_limit }}s</p>
+        <div class="timer-bar-wrapper">
+            <div class="timer-bar" id="timer-bar" style="width: 100%"></div>
+        </div>
+    </div>
+
+    <!-- Domanda -->
+    <p class="question-text">{{ question_text }}</p>
+
+    <!-- Opzioni -->
+    <form id="answer-form" action="/answer" method="POST">
+        <div class="options-list">
+            {% for opt in options %}
+            <div>
+                <input type="radio" class="option-item" name="option" id="opt-{{ loop.index }}" value="{{ opt }}"
+                    {% if answered %}disabled{% endif %}>
+                <label class="option-label {% if answered %}disabled{% endif %}
+                    {% if answered and feedback %}
+                        {% if opt == feedback.correct_answer and feedback.color == 'correct' %}correct-highlight
+                        {% elif opt == feedback.correct_answer %}correct-highlight
+                        {% elif answered and opt != feedback.correct_answer and feedback.color != 'correct' %}
+                        {% endif %}
+                    {% endif %}"
+                    for="opt-{{ loop.index }}">{{ opt }}</label>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if not answered %}
+        <button type="submit" class="btn btn-accent mt-40" id="confirm-btn">CONFERMA RISPOSTA</button>
+        {% endif %}
+    </form>
+
+    {% if answered and feedback %}
+    <!-- Feedback -->
+    <div class="feedback {{ feedback.color }}">
+        <p>{{ feedback.text }}</p>
+        {% if feedback.detail %}
+        <p class="feedback-detail">{{ feedback.detail }}</p>
+        {% endif %}
+    </div>
+
+    <!-- Prossima domanda -->
+    <form action="/next" method="POST">
+        <button type="submit" class="btn btn-next mt-20">PROSSIMA DOMANDA</button>
+    </form>
+    {% endif %}
+</div>
+
+{% if not answered %}
+<!-- Form nascosto per il timeout -->
+<form id="timeout-form" action="/answer" method="POST" style="display:none;">
+    <input type="hidden" name="timeout" value="true">
+</form>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if not answered %}
+<script>
+    (function() {
+        let timeLeft = {{ time_limit }};
+        const totalTime = {{ time_limit }};
+        const timerText = document.getElementById('timer-text');
+        const timerBar = document.getElementById('timer-bar');
+        const timeoutForm = document.getElementById('timeout-form');
+
+        function updateTimer() {
+            if (timeLeft > 0) {
+                timeLeft--;
+                timerText.textContent = 'Tempo: ' + timeLeft + 's';
+                const pct = (timeLeft / totalTime) * 100;
+                timerBar.style.width = pct + '%';
+
+                // Cambia colore della barra
+                timerBar.className = 'timer-bar';
+                if (timeLeft <= 5) {
+                    timerBar.classList.add('danger');
+                } else if (timeLeft <= 10) {
+                    timerBar.classList.add('warning');
+                }
+
+                setTimeout(updateTimer, 1000);
+            } else {
+                // Tempo scaduto: invia il form di timeout
+                timeoutForm.submit();
+            }
+        }
+
+        setTimeout(updateTimer, 1000);
+    })();
+</script>
+{% endif %}
+{% endblock %}

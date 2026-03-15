@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="title mt-50">QUIZ CONCLUSO!</h1>
+
+    <p class="score-text mt-10">Punteggio finale: {{ score }}/{{ total }}</p>
+
+    <form action="/" method="GET">
+        <button type="submit" class="btn btn-mix mt-50">TORNA AL MENU</button>
+    </form>
+</div>
+{% endblock %}

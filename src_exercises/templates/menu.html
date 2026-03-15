@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="title">QUIZ UNIVERSE</h1>
+    <p class="subtitle">Metti alla prova la tua conoscenza</p>
+
+    <!-- Bottone MIX -->
+    <form action="/config" method="POST">
+        <input type="hidden" name="mode" value="MIX">
+        <button type="submit" class="btn btn-mix">MODALITÀ MIX (RANDOM)</button>
+    </form>
+
+    {% if categories %}
+    <p class="category-label">SCEGLI UNA CATEGORIA:</p>
+
+    <form action="/config" method="POST">
+        <input type="hidden" name="mode" value="CAT">
+        <div class="select-wrapper">
+            <select name="category" id="category-select">
+                {% for cat in categories %}
+                <option value="{{ cat }}">{{ cat }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-accent mt-10">GIOCA CATEGORIA</button>
+    </form>
+    {% endif %}
+</div>
+{% endblock %}

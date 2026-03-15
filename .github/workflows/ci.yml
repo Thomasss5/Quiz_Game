@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, refactoring_gui]
     paths-ignore:
       - "README.md"
       - "docs/**"
