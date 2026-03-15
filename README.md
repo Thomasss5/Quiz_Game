@@ -6,46 +6,45 @@
 - Thomas Morales  -  matricola: 1000071746 -  L-31 - GitHub   [Thomasss5](https://github.com/Thomasss5)
 
   
-[link della Repository](https://github.com/Thomasss5/Progetto_Finale.git)
+[Repository Link](https://github.com/Thomasss5/Progetto_Finale.git)
 
 
 ---
 
-## 🎯 Obiettivo
-L'obiettivo del progetto è la realizzazione di un'applicazione interattiva in Python per la gestione e l'esecuzione di quiz a risposta multipla.
+## 🎯 Objective
+The goal of this project is to create an interactive Python application for managing and playing multiple-choice quizzes.
 
-L'applicazione è pensata per offrire un'esperienza semplice e intuitiva, permettendo di caricare quiz personalizzati da file JSON, giocare tramite console o interfaccia grafica e ottenere un feedback immediato sulle prestazioni.
-
----
-
-## 🧠 Descrizione generale
-La Quiz Game App consente all'utente di:
-1. Caricare uno o più quiz da file JSON
-2. Avviare una sessione di gioco tramite il **browser web** 
-3. Rispondere alle domande selezionando una delle opzioni disponibili
-4. Calcolare automaticamente il punteggio finale
-5. Visualizzare il risultato 
-
+The app is designed to provide a simple and intuitive experience, allowing users to load custom quizzes from JSON files, play via a web interface, and receive immediate feedback on their performance.
 
 ---
 
-## 📁 Struttura del progetto
+## 🧠 General Description
+The **Quiz Game App** allows users to:
+1. Load one or more quizzes from **JSON** files.
+2. Start a gaming session via a **web browser**.
+3. Answer questions by selecting one of the available options.
+4. Automatically calculate the **final score**.
+5. Display the final results.
+
+---
+
+## 📁 Project Structure
 
 ```
 Quiz_Game/
 ├── src_exercises/
-│   ├── quiz_manager.py        # Gestione salvataggio/caricamento quiz da JSON
-│   ├── app.py                 # Applicazione Web Flask
-│   ├── templates/             # Template HTML per l'App Web
-│   │   ├── base.html          # Layout CSS di base
-│   │   ├── menu.html          # Menu principale
-│   │   ├── config.html        # Schermata configurazione quiz
-│   │   ├── question.html      # Schermata domanda con timer
-│   │   └── results.html       # Schermata risultati finali
+│   ├── quiz_manager.py        # Handles saving/loading quizzes from JSON
+│   ├── app.py                 # Flask Web Application
+│   ├── templates/             # HTML Templates for the Web App
+│   │   ├── base.html          # Base CSS layout
+│   │   ├── menu.html          # Main menu
+│   │   ├── config.html        # Quiz configuration screen
+│   │   ├── question.html      # Question screen with timer
+│   │   └── results.html       # Final results screen
 │   ├── test_quiz.py           # Unit test (pytest + Flask Client)
-│   ├── questions/             # Cartella contenente i quiz JSON
-│   │   ├── Astronomia.json    # Quiz Astronomia
-│   │   ├── Informatica.json   # Quiz Informatica
+│   ├── questions/             # Folder containing JSON quizzes
+│   │   ├── Astronomia.json    # Astronomy Quiz
+│   │   ├── Informatica.json   # Computer Science Quiz 
 │   │   └── ... 
 │   └── __init__.py
 ├── requirements_dev.txt
@@ -53,49 +52,47 @@ Quiz_Game/
 └── .github/
 ```
 
-### Struttura dei quiz (JSON)
-Ogni quiz è definito tramite un file JSON ed è composto da:
-1. **Titolo** del quiz (opzionale se inferibile dal nome file)
-2. **Elenco di domande**, ciascuna caratterizzata da:
-   - testo della domanda
-   - elenco di opzioni di risposta
-   - indice della risposta corretta
-
+### Quiz Structure (JSON)
+Each quiz is defined by a JSON file and consists of:
+1. **Title** of the quiz (optional if inferred from the filename).
+2. **List of Questions**, each featuring:
+   - Question text.
+   - List of answer options.
+   - Index of the correct answer.
 
 
 ---
 
-## 🚀 Funzionalità principali
+## 🚀 Key Features
 
-✔️ Caricamento quiz da file JSON dalle diverse categorie
+✔️ Dynamic Loading: Load quizzes from JSON files across various categories.
 
-✔️ interfaccia moderna: Web App grafica (Flask/Browser)
+✔️ Modern Interface: Graphical Web App powered by Flask.
 
-✔️ Interfaccia responsiva, colorata (inclusiva di Timer grafico), e Cross-Platform grazie al Web
+✔️ User Experience: Responsive, colorful interface (including a visual timer), and cross-platform compatibility via the web.
 
-✔️ Modalià "Mix" (domande random da più categorie) o per Categoria
+✔️ Game Modes: "Mix" mode (random questions from multiple categories) or specific "Category" mode.
 
-✔️ Quiz a risposta multipla con feedback immediato per risposte corrette/errate/timeout
+✔️ Instant Feedback: Multiple-choice format with immediate feedback for correct/incorrect/timeout responses.
 
-✔️ Calcolo automatico del punteggio
+✔️ Scoring: Automatic calculation of the final score.
 
 ---
 
 ## 🧪 Testing
 
-I test sono sviluppati con il framework **pytest** e simulano l'interazione web tramite il Flask Test Client.
-Il progetto è monitorato tramite GitHub Actions (CI) con Black, Flake8, Isort, Pylint e Mypy.
+Tests are developed using the **pytest** framework and simulate web interaction via the Flask Test Client. The project is monitored through GitHub Actions (CI) using Black, Flake8, Isort, Pylint, and Mypy.
 
 | Modulo | Coverage |
 |------|----------|
 | `test_quiz.py` | 99% |
 | `app.py` | 93% |
 | `quiz_manager.py` | 73% |
-| **Totale Copertura Core** | **~94%** |
+| **Totale Core Coverage** | **~94%** |
 
-*(Nota sul Code Coverage: Il report analizza esclusivamente il codice logico Python (`.py`). I file di markup/stile (la cartella `templates/` con i file `.html`) e i dati (la cartella `questions/` con i `.json`) non contengono logica di programmazione e non rientrano nel perimetro del Coverage Testing.)*
+*Note on Code Coverage: The report exclusively analyzes Python logic files (.py). Markup/style files (the templates/ folder) and data files (the questions/ folder) do not contain programming logic and are therefore outside the scope of coverage testing.*
 
-Per eseguire i test con il report di coverage:
+To run tests with the coverage report:
 ```bash
 cd src_exercises
 python3 -m pytest test_quiz.py -v --cov=. 
@@ -103,21 +100,21 @@ python3 -m pytest test_quiz.py -v --cov=.
 
 ---
 
-## ⚙️ Come eseguire il progetto
+## ⚙️ How to Run the Project 
 
-### Installazione dipendenze
+### Dependency Installation
 ```bash
 pip install -r requirements_dev.txt
 ```
 
-Assicurarsi di avere installato `flask`
+Ensure that **Flask** is installed.
 
-### Avvio da Web App 
+### Launching the Web App
 ```bash
 cd src_exercises
 python3 app.py
 ```
-Aprire il browser e collegarsi a `http://127.0.0.1:5000`
+Open your browser and navigate to: http://127.0.0.1:5000
 
 ---
 
