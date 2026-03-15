@@ -2,6 +2,7 @@ import json
 import os
 from typing import List
 
+
 class QuizManager:
     def __init__(self, quizzes_dir: str = "questions"):
         self.quizzes_dir = quizzes_dir
@@ -22,9 +23,9 @@ class QuizManager:
                 return data
             elif isinstance(data, dict) and "questions" in data:
                 return data["questions"]
-            
+
             return []
-            
+
         except Exception as e:
             print(f"Errore caricamento nel file {path}: {e}")
             return []

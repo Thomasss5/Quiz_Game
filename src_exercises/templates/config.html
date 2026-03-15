@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="title">CONFIGURA QUIZ</h1>
+
+    <p class="mode-label">Modalità: {{ category }}</p>
+
+    <p class="config-hint">Quante domande vuoi affrontare?</p>
+
+    <form action="/start" method="POST">
+        <div class="slider-wrapper">
+            <input type="range" id="question-slider" name="total_questions" min="5" max="20" value="10">
+            <span class="slider-value" id="slider-display">10</span>
+        </div>
+
+        <button type="submit" class="btn btn-accent mt-40">INIZIA QUIZ</button>
+    </form>
+
+    <form action="/" method="GET">
+        <button type="submit" class="btn btn-danger mt-10">ANNULLA</button>
+    </form>
+</div>
+
+<script>
+    const slider = document.getElementById('question-slider');
+    const display = document.getElementById('slider-display');
+    slider.addEventListener('input', () => {
+        display.textContent = slider.value;
+    });
+</script>
+{% endblock %}
