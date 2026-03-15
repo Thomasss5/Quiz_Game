@@ -1,0 +1,205 @@
+{
+    "title": "Videogiochi",
+    "questions": [
+        {
+            "text": "Chi è il protagonista della saga 'The Legend of Zelda'?",
+            "options": [
+                "Zelda",
+                "Ganon",
+                "Link",
+                "Tingle"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "In quale anno è stata rilasciata la prima PlayStation?",
+            "options": [
+                "1994",
+                "1990",
+                "1992",
+                "1996"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Quale azienda ha creato la console Xbox?",
+            "options": [
+                "Sony",
+                "Sega",
+                "Nintendo",
+                "Microsoft"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "Qual è il videogioco più venduto di tutti i tempi?",
+            "options": [
+                "Tetris",
+                "Minecraft",
+                "GTA V",
+                "Wii Sports"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "In 'Pac-Man', come si chiama il fantasma rosso?",
+            "options": [
+                "Inky",
+                "Pinky",
+                "Blinky",
+                "Clyde"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Quale console portatile Nintendo ha avuto due schermi?",
+            "options": [
+                "Nintendo DS",
+                "GameBoy",
+                "GameGear",
+                "PSP"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Quale studio ha sviluppato 'The Witcher 3'?",
+            "options": [
+                "Ubisoft",
+                "Rockstar Games",
+                "CD Projekt Red",
+                "Bethesda"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "In 'Sonic the Hedgehog', cosa raccoglie il protagonista per proteggersi?",
+            "options": [
+                "Monete",
+                "Stelle",
+                "Smeraldi",
+                "Anelli"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "Chi è l'idraulico baffuto protagonista della saga Nintendo?",
+            "options": [
+                "Luigi",
+                "Mario",
+                "Wario",
+                "Waluigi"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale gioco arcade degli anni '70 simulava il ping-pong?",
+            "options": [
+                "Pong",
+                "Space Invaders",
+                "Asteroids",
+                "Galaga"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Chi ha creato il gioco 'Metal Gear Solid'?",
+            "options": [
+                "Shigeru Miyamoto",
+                "Hidetaka Miyazaki",
+                "Hideo Kojima",
+                "Todd Howard"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Quale Pokémon ha il numero 001 nel Pokédex nazionale?",
+            "options": [
+                "Pikachu",
+                "Bulbasaur",
+                "Charmander",
+                "Squirtle"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Qual è l'arma principale in 'God of War' (2018)?",
+            "options": [
+                "Spade del Caos",
+                "Martello di Thor",
+                "Arco di Artemide",
+                "Ascia Leviatano"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "In 'Halo', come si chiama il protagonista?",
+            "options": [
+                "Master Chief",
+                "Marcus Fenix",
+                "Doomguy",
+                "Commander Shepard"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Quale gioco ha come valuta i 'Simoleon'?",
+            "options": [
+                "Animal Crossing",
+                "Stardew Valley",
+                "The Sims",
+                "SimCity"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Chi è l'antagonista principale in 'Final Fantasy VII'?",
+            "options": [
+                "Sephiroth",
+                "Kefka",
+                "Cloud",
+                "Genesis"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Come si chiama il regno di Super Mario?",
+            "options": [
+                "Hyrule",
+                "Dream Land",
+                "Azeroth",
+                "Mushroom Kingdom"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "Quale anno ha visto l'uscita della prima Xbox?",
+            "options": [
+                "1998",
+                "2001",
+                "2005",
+                "1995"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale gioco è famoso per 'Praise the Sun'?",
+            "options": [
+                "Skyrim",
+                "Dark Souls",
+                "Bloodborne",
+                "The Witcher"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Qual è il nome della protagonista di 'Tomb Raider'?",
+            "options": [
+                "Jill Valentine",
+                "Samus Aran",
+                "Ellie",
+                "Lara Croft"
+            ],
+            "correct_index": 3
+        }
+    ]
+}

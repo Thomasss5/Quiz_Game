@@ -1,0 +1,205 @@
+{
+    "title": "Astronomia",
+    "questions": [
+        {
+            "text": "Qual è il pianeta più vicino al Sole?",
+            "options": [
+                "Venere",
+                "Marte",
+                "Mercurio",
+                "Terra"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Qual è il pianeta più grande del sistema solare?",
+            "options": [
+                "Saturno",
+                "Giove",
+                "Nettuno",
+                "Urano"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Come si chiama la galassia che ospita il sistema solare?",
+            "options": [
+                "Andromeda",
+                "Via Lattea",
+                "Sombrero",
+                "Antenna"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale pianeta è soprannominato il 'Pianeta Rosso'?",
+            "options": [
+                "Mercurio",
+                "Giove",
+                "Marte",
+                "Venere"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Qual è la stella più vicina alla Terra dopo il Sole?",
+            "options": [
+                "Sirio",
+                "Proxima Centauri",
+                "Betelgeuse",
+                "Vega"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quante lune principali ha Marte?",
+            "options": [
+                "1",
+                "2",
+                "4",
+                "0"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale pianeta ha il giorno più lungo del suo anno?",
+            "options": [
+                "Venere",
+                "Mercurio",
+                "Marte",
+                "Nettuno"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Di cosa sono fatti principalmente gli anelli di Saturno?",
+            "options": [
+                "Roccia",
+                "Gas",
+                "Ghiaccio e Polvere",
+                "Metallo"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "In quale anno l'uomo è sbarcato per la prima volta sulla Luna?",
+            "options": [
+                "1965",
+                "1969",
+                "1971",
+                "1975"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Qual è il pianeta più freddo del sistema solare?",
+            "options": [
+                "Nettuno",
+                "Plutone",
+                "Urano",
+                "Saturno"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Come si chiama l'eclissi in cui la Luna si frappone tra Terra e Sole?",
+            "options": [
+                "Lunare",
+                "Solare",
+                "Stellare",
+                "Galattica"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Qual è la luna più grande di Saturno?",
+            "options": [
+                "Europa",
+                "Ganimede",
+                "Titano",
+                "Io"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Cos'è un 'buco nero'?",
+            "options": [
+                "Un pianeta morto",
+                "Una regione con gravità estrema",
+                "Una stella fredda",
+                "Un vuoto di materia"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quanto tempo impiega la luce del Sole a raggiungere la Terra?",
+            "options": [
+                "8 secondi",
+                "8 minuti",
+                "8 ore",
+                "1 ora"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale pianeta ruota su un fianco?",
+            "options": [
+                "Urano",
+                "Nettuno",
+                "Saturno",
+                "Giove"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Chi fu il primo uomo nello spazio?",
+            "options": [
+                "Neil Armstrong",
+                "Yuri Gagarin",
+                "Buzz Aldrin",
+                "John Glenn"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Come si chiama la stella polare?",
+            "options": [
+                "Sirio",
+                "Polaris",
+                "Antares",
+                "Rigel"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale missione portò i primi uomini sulla Luna?",
+            "options": [
+                "Apollo 11",
+                "Apollo 13",
+                "Sputnik",
+                "Voyager"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Qual è il componente principale dell'atmosfera di Marte?",
+            "options": [
+                "Ossigeno",
+                "Azoto",
+                "Anidride Carbonica",
+                "Idrogeno"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Quale pianeta è noto per la 'Grande Macchia Rossa'?",
+            "options": [
+                "Marte",
+                "Giove",
+                "Saturno",
+                "Nettuno"
+            ],
+            "correct_index": 1
+        }
+    ]
+}

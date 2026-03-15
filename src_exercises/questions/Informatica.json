@@ -1,0 +1,105 @@
+{
+    "title": "Informatica",
+    "questions": [
+        {
+            "text": "Cosa significa l'acronimo CPU?",
+            "options": ["Central Process Utility", "Central Processing Unit", "Computer Personal Unit", "Core Processing Unit"],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale linguaggio di programmazione è noto come 'il linguaggio del web'?",
+            "options": ["Python", "Java", "JavaScript", "C++"],
+            "correct_index": 2
+        },
+        {
+            "text": "Quanti bit ci sono in un byte?",
+            "options": ["4", "8", "16", "32"],
+            "correct_index": 1
+        },
+        {
+            "text": "Cosa significa l'acronimo HTML?",
+            "options": ["HyperText Markup Language", "High Tech Modern Language", "HyperText Machine Language", "Home Tool Markup Language"],
+            "correct_index": 0
+        },
+        {
+            "text": "Quale sistema operativo è open source?",
+            "options": ["Windows", "macOS", "Linux", "iOS"],
+            "correct_index": 2
+        },
+        {
+            "text": "Cosa rappresenta l'acronimo RAM?",
+            "options": ["Read Access Memory", "Random Access Memory", "Rapid Action Memory", "Real Application Memory"],
+            "correct_index": 1
+        },
+        {
+            "text": "Qual è il sistema di numerazione utilizzato dai computer?",
+            "options": ["Decimale", "Ottale", "Esadecimale", "Binario"],
+            "correct_index": 3
+        },
+        {
+            "text": "Chi è considerato il padre dell'informatica?",
+            "options": ["Bill Gates", "Steve Jobs", "Alan Turing", "Tim Berners-Lee"],
+            "correct_index": 2
+        },
+        {
+            "text": "Cosa significa SQL?",
+            "options": ["Structured Query Language", "Simple Question Language", "System Query Logic", "Standard Query Line"],
+            "correct_index": 0
+        },
+        {
+            "text": "Quale protocollo viene usato per navigare in modo sicuro sul web?",
+            "options": ["HTTP", "FTP", "HTTPS", "SMTP"],
+            "correct_index": 2
+        },
+        {
+            "text": "Chi ha fondato la Microsoft insieme a Paul Allen?",
+            "options": ["Steve Jobs", "Elon Musk", "Jeff Bezos", "Bill Gates"],
+            "correct_index": 3
+        },
+        {
+            "text": "Quale di queste è una memoria non volatile?",
+            "options": ["RAM", "Cache", "Hard Disk", "Registri CPU"],
+            "correct_index": 2
+        },
+        {
+            "text": "Cosa significa l'acronimo URL?",
+            "options": ["Uniform Resource Locator", "Universal Radio Line", "Unified Resource Link", "User Remote Log"],
+            "correct_index": 0
+        },
+        {
+            "text": "Quale linguaggio è stato creato da Guido van Rossum?",
+            "options": ["Ruby", "PHP", "Python", "Swift"],
+            "correct_index": 2
+        },
+        {
+            "text": "Cosa fa un 'Compilatore'?",
+            "options": ["Pulisce i virus", "Traduce il codice sorgente in linguaggio macchina", "Velocizza la connessione internet", "Spegne il computer in caso di errore"],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale porta viene solitamente usata per connettere mouse e tastiere moderni?",
+            "options": ["VGA", "HDMI", "Ethernet", "USB"],
+            "correct_index": 3
+        },
+        {
+            "text": "Cos'è un 'Firewall'?",
+            "options": ["Un componente che raffredda il PC", "Un sistema di difesa per reti informatiche", "Un cavo per la fibra ottica", "Un tipo di alimentatore"],
+            "correct_index": 1
+        },
+        {
+            "text": "Quale di questi NON è un linguaggio di programmazione?",
+            "options": ["C#", "HTML", "Java", "Kotlin"],
+            "correct_index": 1
+        },
+        {
+            "text": "Cosa significa l'acronimo Wi-Fi?",
+            "options": ["Wireless Fidelity", "Wide Fiber", "Wired Firmware", "Wireless Filter"],
+            "correct_index": 0
+        },
+        {
+            "text": "In informatica, cos'è un 'Cookie'?",
+            "options": ["Un virus che mangia i dati", "Un piccolo file di testo salvato dai siti web nel browser", "Un errore del processore", "Una parte dell'hard disk"],
+            "correct_index": 1
+        }
+    ]
+}

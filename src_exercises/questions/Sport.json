@@ -1,0 +1,205 @@
+{
+    "title": "Sport",
+    "questions": [
+        {
+            "text": "Quanti giocatori compongono una squadra di calcio in campo?",
+            "options": [
+                "10",
+                "11",
+                "12",
+                "9"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Ogni quanti anni si tengono i Giochi Olimpici?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Chi detiene il record mondiale dei 100 metri?",
+            "options": [
+                "Usain Bolt",
+                "Carl Lewis",
+                "Marcel Jacobs",
+                "Tyson Gay"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Quale nazione ha vinto più Mondiali di calcio?",
+            "options": [
+                "Italia",
+                "Germania",
+                "Brasile",
+                "Argentina"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Quanti set servono per vincere nel Grande Slam maschile?",
+            "options": [
+                "2",
+                "4",
+                "5",
+                "3"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "In quale città si trova lo stadio 'Santiago Bernabéu'?",
+            "options": [
+                "Madrid",
+                "Barcellona",
+                "Milano",
+                "Londra"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Chi è il cestista con la maglia 23 dei Bulls?",
+            "options": [
+                "LeBron James",
+                "Michael Jordan",
+                "Kobe Bryant",
+                "Magic Johnson"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "In quale sport si effettuano le 'mete'?",
+            "options": [
+                "Calcio",
+                "Basket",
+                "Rugby",
+                "Pallanuoto"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "Quale superficie caratterizza Wimbledon?",
+            "options": [
+                "Erba",
+                "Terra rossa",
+                "Cemento",
+                "Sintetico"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "In quale sport si corre tra le 'basi'?",
+            "options": [
+                "Cricket",
+                "Golf",
+                "Hockey",
+                "Baseball"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "Quanti minuti dura un tempo di calcio?",
+            "options": [
+                "30 min",
+                "45 min",
+                "40 min",
+                "60 min"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Chi ha vinto più titoli in MotoGP?",
+            "options": [
+                "Valentino Rossi",
+                "Marc Marquez",
+                "Giacomo Agostini",
+                "Mick Doohan"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "In quale città si corre la maratona originale?",
+            "options": [
+                "Atene",
+                "Maratona",
+                "Sparta",
+                "Olimpia"
+            ],
+            "correct_index": 1
+        },
+        {
+            "text": "Quanti punti vale un tiro libero nel basket?",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "0"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Quale ciclista è soprannominato 'Il Pirata'?",
+            "options": [
+                "Gino Bartali",
+                "Fausto Coppi",
+                "Vincenzo Nibali",
+                "Marco Pantani"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "Quanti minuti dura un periodo di Hockey su ghiaccio?",
+            "options": [
+                "15",
+                "25",
+                "30",
+                "20"
+            ],
+            "correct_index": 3
+        },
+        {
+            "text": "In che anno l'Italia ha vinto l'ultimo mondiale?",
+            "options": [
+                "2006",
+                "1982",
+                "1990",
+                "2021"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Chi è il primatista di gol nella storia del calcio?",
+            "options": [
+                "Pelé",
+                "Lionel Messi",
+                "Cristiano Ronaldo",
+                "Maradona"
+            ],
+            "correct_index": 2
+        },
+        {
+            "text": "In quale sport si usa il termine 'canestro'?",
+            "options": [
+                "Basket",
+                "Pallavolo",
+                "Tennis",
+                "Rugby"
+            ],
+            "correct_index": 0
+        },
+        {
+            "text": "Come si chiama il trofeo del vincitore della F1?",
+            "options": [
+                "Gran Premio",
+                "Coppa del Mondo",
+                "Titolo Mondiale Piloti",
+                "Trofeo Campioni"
+            ],
+            "correct_index": 2
+        }
+    ]
+}
