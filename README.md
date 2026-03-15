@@ -21,7 +21,7 @@ L'applicazione è pensata per offrire un'esperienza semplice e intuitiva, permet
 ## 🧠 Descrizione generale
 La Quiz Game App consente all'utente di:
 1. Caricare uno o più quiz da file JSON
-2. Avviare una sessione di gioco tramite il **browser web** (`app.py` via Flask)
+2. Avviare una sessione di gioco tramite il **browser web** 
 3. Rispondere alle domande selezionando una delle opzioni disponibili
 4. Calcolare automaticamente il punteggio finale
 5. Visualizzare il risultato 
@@ -69,15 +69,13 @@ Ogni quiz è definito tramite un file JSON ed è composto da:
 
 ✔️ Caricamento quiz da file JSON dalle diverse categorie
 
-✔️ Doppia interfaccia: console (CLI) e Web App grafica (Flask/Browser)
+✔️ interfaccia moderna: Web App grafica (Flask/Browser)
 
 ✔️ Interfaccia responsiva, colorata (inclusiva di Timer grafico), e Cross-Platform grazie al Web
 
 ✔️ Modalià "Mix" (domande random da più categorie) o per Categoria
 
 ✔️ Quiz a risposta multipla con feedback immediato per risposte corrette/errate/timeout
-
-✔️ Creazione di nuovi quiz da console
 
 ✔️ Calcolo automatico del punteggio
 
@@ -95,7 +93,7 @@ Il progetto è monitorato tramite GitHub Actions (CI) con Black, Flake8, Isort, 
 | `quiz_manager.py` | 73% |
 | **Totale Copertura Core** | **~94%** |
 
-*(Nota: i file non testati, come le interfacce per console CLI deprecate e file di backup, sono esclusi dal conteggio del coverage tramite `.coveragerc`)*
+*(Nota sul Code Coverage: Il report analizza esclusivamente il codice logico Python (`.py`). I file di markup/stile (la cartella `templates/` con i file `.html`) e i dati (la cartella `questions/` con i `.json`) non contengono logica di programmazione e non rientrano nel perimetro del Coverage Testing.)*
 
 Per eseguire i test con il report di coverage:
 ```bash
@@ -112,20 +110,14 @@ python3 -m pytest test_quiz.py -v --cov=.
 pip install -r requirements_dev.txt
 ```
 
-*(Assicurarsi di avere installato `flask`)*
+Assicurarsi di avere installato `flask`
 
-### Avvio da Web App (CONSIGLIATO)
+### Avvio da Web App 
 ```bash
 cd src_exercises
 python3 app.py
 ```
-*(Aprire il browser e collegarsi a `http://127.0.0.1:5000`)*
-
-### Avvio da console
-```bash
-cd src_exercises
-python3 main.py
-```
+Aprire il browser e collegarsi a `http://127.0.0.1:5000`
 
 ---
 
