@@ -5,5 +5,4 @@ pylint
 mypy
 flake8
 requests    # Per fare le chiamate API
-fastapi     # (o flask) Per creare la vostra API
-uvicorn     # (Se usate fastapi)
+flask       # Per l'applicazione Web
