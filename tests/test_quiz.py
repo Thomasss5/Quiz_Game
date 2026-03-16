@@ -4,7 +4,7 @@ import shutil
 
 import pytest
 
-from src_exercises.quiz_manager import QuizManager
+from quiz_manager import QuizManager
 
 # =====================================================================
 # TEST PER QUIZ_MANAGER.PY (invariati)
@@ -42,7 +42,7 @@ class TestFlaskApp:
     @pytest.fixture
     def client(self):
         """Crea un test client Flask."""
-        from src_exercises.app import app
+        from app import app
 
         app.config["TESTING"] = True
         app.config["SECRET_KEY"] = "test-secret"

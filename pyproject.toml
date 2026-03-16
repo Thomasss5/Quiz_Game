@@ -6,7 +6,7 @@ line-length = 88
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["."]
+pythonpath = ["src_exercises"]
 
 [tool.mypy]
 ignore_missing_imports = true

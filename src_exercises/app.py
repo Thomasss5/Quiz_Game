@@ -3,7 +3,7 @@ import random
 
 from flask import Flask, redirect, render_template, request, session, url_for
 
-from src_exercises.quiz_manager import QuizManager
+from quiz_manager import QuizManager
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
