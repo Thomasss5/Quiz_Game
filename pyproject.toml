@@ -5,5 +5,22 @@ profile = "black"
 line-length = 88
 
 [tool.pytest.ini_options]
-testpaths = ["src_exercises"]
+testpaths = ["tests"]
 pythonpath = ["src_exercises"]
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.pylint.master]
+ignore = ["venv"]
+
+[tool.pylint.messages_control]
+disable = [
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "import-error",
+    "attribute-defined-outside-init",
+    "too-few-public-methods",
+    "import-outside-toplevel"
+]

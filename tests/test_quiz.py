@@ -4,7 +4,7 @@ import shutil
 
 import pytest
 
-from quiz_manager import QuizManager
+from src_exercises.quiz_manager import QuizManager
 
 # =====================================================================
 # TEST PER QUIZ_MANAGER.PY (invariati)
@@ -25,7 +25,7 @@ class TestQuizManager:
     def test_load_quiz_from_json_list_format(self):
         path = os.path.join(self.test_dir, "list.json")
         data = [{"text": "Q1", "options": ["A", "B"], "correct_index": 0}]
-        with open(path, "w") as f:
+        with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f)
 
         loaded = self.manager.load_quiz_from_json(path)
@@ -42,7 +42,7 @@ class TestFlaskApp:
     @pytest.fixture
     def client(self):
         """Crea un test client Flask."""
-        from app import app
+        from src_exercises.app import app
 
         app.config["TESTING"] = True
         app.config["SECRET_KEY"] = "test-secret"
