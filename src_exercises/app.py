@@ -147,14 +147,14 @@ def answer():
         }
     elif timeout:
         feedback = {
-            "text": f"TEMPO SCADUTO!",
+            "text": "TEMPO SCADUTO!",
             "detail": f"La risposta corretta era: {correct_answer}",
             "color": "timeout",
             "correct_answer": correct_answer,
         }
     else:
         feedback = {
-            "text": f"RISPOSTA ERRATA!",
+            "text": "RISPOSTA ERRATA!",
             "detail": f"La risposta corretta era: {correct_answer}",
             "color": "incorrect",
             "correct_answer": correct_answer,

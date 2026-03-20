@@ -4,5 +4,7 @@ pytest-cov
 pylint
 mypy
 flake8
+black
+isort
 requests    # Per fare le chiamate API
 flask       # Per l'applicazione Web

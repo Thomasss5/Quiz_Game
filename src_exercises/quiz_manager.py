@@ -21,11 +21,11 @@ class QuizManager:
             # Restituiamo direttamente la lista delle domande
             if isinstance(data, list):
                 return data
-            elif isinstance(data, dict) and "questions" in data:
+            if isinstance(data, dict) and "questions" in data:
                 return data["questions"]
 
             return []
 
-        except Exception as e:
+        except (OSError, json.JSONDecodeError) as e:
             print(f"Errore caricamento nel file {path}: {e}")
             return []
